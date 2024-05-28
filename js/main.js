@@ -17,13 +17,14 @@ function validarCantidad() {
 
 btnAgregar.addEventListener("click", function (e) {
   e.preventDefault();
+  alertaValidacionesTexto.innerHTML = "";
   alertaValidaciones.style.display = "none";
   txtNombre.style.border = "";
   txtNumber.style.border = "";
 
   if (txtNombre.value.length < 3) {
     alertaValidacionesTexto.innerHTML =
-      "El <strong>nombre</strong> no es correcto";
+      "El <strong>nombre</strong> no es correcto <br>";
     alertaValidaciones.style.display = "block";
     txtNombre.style.border = "solid red medium";
   }
